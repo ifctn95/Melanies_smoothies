@@ -40,7 +40,8 @@ if ingredients_list:
     if time_to_insert:
         session.sql(my_insert_stmt).collect()
         st.write(f"✅ Your Smoothie is ordered, {name_on_order}!")
-        
+
+#New section to display fruityservice nutrition information
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 st.text(fruityvice_response)
